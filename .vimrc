@@ -14,6 +14,7 @@ Bundle 'desert256.vim'
 Bundle 'Wombat'
 Bundle 'https://github.com/garbas/vim-snipmate.git'
 
+au BufRead,BufNewFile *.md set filetype=markdown
 filetype plugin indent on
 let g:tex_flavor='latex'
 let g:Tex_ViewRule_pdf = '/Applications/Skim.app/Contents/MacOS/Skim'
@@ -31,5 +32,5 @@ set ruler
 set nolist
 set dictionary=/usr/share/dict/words
 set thesaurus=/Users/Silva/.vim/mthesaur.txt
-cd ~/vhdl
 imap <D-space> <Esc>
+nmap <leader>md :!/usr/local/bin/Markdown.pl --html4tags index.md > index.html <cr>
