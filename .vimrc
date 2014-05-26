@@ -37,3 +37,4 @@ imap <D-space> <Esc>
 "nnoremap <leader>md :silent !open -a Marked.app '%:p'<cr>
 "nmap <leader>md :!/usr/local/bin/Markdown.pl --html4tags index.md > index.html <cr>
 nnoremap <leader>md :silent !build <cr>
+nnoremap <leader>v :r !pbpaste <cr>
