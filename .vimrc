@@ -26,11 +26,14 @@ set foldmethod=syntax
 set foldcolumn=0
 set foldlevelstart=9999
 set wrap
-set textwidth=79
+"set textwidth=79
 set relativenumber
 set ruler
 set nolist
 set dictionary=/usr/share/dict/words
+set shellcmdflag=-ic
 set thesaurus=/Users/Silva/.vim/mthesaur.txt
 imap <D-space> <Esc>
-nmap <leader>md :!/usr/local/bin/Markdown.pl --html4tags index.md > index.html <cr>
+"nnoremap <leader>md :silent !open -a Marked.app '%:p'<cr>
+"nmap <leader>md :!/usr/local/bin/Markdown.pl --html4tags index.md > index.html <cr>
+nnoremap <leader>md :silent !build <cr>
