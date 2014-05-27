@@ -23,6 +23,7 @@ let g:Tex_MultipleCompileFormats = 'pdf'
 let g:Tex_CompileRule_pdf = 'pdflatex -synctex=1 --interaction=nonstopmode $*'
 syntax on
 set foldmethod=syntax
+set cursorline
 set foldcolumn=0
 set foldlevelstart=9999
 set wrap
@@ -37,4 +38,7 @@ imap <D-space> <Esc>
 "nnoremap <leader>md :silent !open -a Marked.app '%:p'<cr>
 "nmap <leader>md :!/usr/local/bin/Markdown.pl --html4tags index.md > index.html <cr>
 nnoremap <leader>md :silent !build <cr>
+"paste clipboard
 nnoremap <leader>v :r !pbpaste <cr>
+"copy current line to clipboard
+nnoremap <leader>c :.w !pbcopy <cr> 
